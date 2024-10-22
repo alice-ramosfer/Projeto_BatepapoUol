@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bate-Papo UOL</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
+  </head>
+  <body class="body">
+    <div class="container">
+        <div><button name="fundo" class="fundo" onclick="abrirMenu(this)"></button></div>
+        <div class="barra_superior">
+            <img src="img/logo.png" alt="logo">
+            <button><ion-icon name="people" onclick="abrirMenu(this)"></ion-icon></button>
+        </div>
+        <div class="chat">
+
+        </div>
+        <div class="barra_inferior">
+            <div class="caixa_texto">
+                <input type="text" id="input" value="" placeholder="Escreva aqui..." onfocus="limparTexto(this)" onblur="restaurarTexto(this)">
+                <span class="tipo_mensagem">Enviando para Todos (Público)</span>
+            </div>
+            <button onclick="enviarMensagem()"><ion-icon name="paper-plane-outline"></ion-icon></button>
+        </div>
+        <div class="menu_lateral">
+            <div class="contato">
+                <span>Escolha um contato para enviar mensagem:</span>
+                <div class="container_botao">
+                    <button onclick="selecionaContato(this)" class="botao_selec">
+                        <ion-icon name="paper-plane-outline" class="icone_contato"></ion-icon> 
+                        <span class="especificacao_contato"> Todos</span>
+                        <ion-icon name="checkmark-sharp" class=" icone_selecionado"></ion-icon>
+                    </button>
+                </div>
+            </div>
+            <div class="visibilidade">
+                <span>Escolha a visibilidade:</span>
+                <div class="container_botao_visibilidade">
+                    <button onclick="selecionaVisbilidade(this)">
+                        <ion-icon name="lock-open" class=""></ion-icon>
+                        <span class="especificacao_contato">Público</span>
+                        <ion-icon name="checkmark-sharp" class=" icone_selecionado"></ion-icon>
+
+                    </button>
+                    <button onclick="selecionaVisbilidade(this)">
+                        <ion-icon name="lock-closed" class=""></ion-icon>
+                        <span class="especificacao_contato">Reservadamente</span>
+                    
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+
+  </body>
